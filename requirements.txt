@@ -1,4 +1,10 @@
 numpy
 pandas
 seaborn
--e .        # added this line to run the setup.py file everytime the requirements.txt file is updated and executed.
+matplotlib
+scikit-learn
+catboost
+xgboost
+#-e .        # added this line to run the setup.py file everytime the requirements.txt file is updated and executed.
+# -e . line is commented out to avoid running the setup.py file everytime the requirements.txt file is updated and executed
+

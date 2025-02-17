@@ -1,6 +1,6 @@
 # sys package is used to manipulate the python runtime environment information.
 import sys 
-#import logging   # this is the generic logging module. 
+#import logging   # this is the generic logging module.
 from src.logger import logging  # we are suppoed to use the logging object from the logger module not the genric logging module. 
 
 
