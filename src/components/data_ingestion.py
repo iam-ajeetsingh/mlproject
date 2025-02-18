@@ -8,6 +8,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass       # note this new library
 
+# importing data transformation class and its config class
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+
 
 # This class is responsible for reading the data from the source
 # I am defining all the inputs in the dataclass
@@ -52,9 +56,13 @@ class DataIngestion:
         
         
 if __name__ == "__main__":
-    data_ingestion = DataIngestion()
-    data_ingestion.initiate_data_ingestion()
+    obj = DataIngestion()
+    train_data, test_data = obj.initiate_data_ingestion()
 
+    # initiating the data transformation process
+    data_transformation_obj = DataTransformation()
+    data_transformation_obj.initiate_data_transformation(train_data, test_data)
+    
 
 
 
